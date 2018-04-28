@@ -285,7 +285,7 @@ start_rpc: true
 #
 # Leaving this blank has the same effect it does for ListenAddress,
 # (i.e. it will be based on the configured hostname of the node).
-rpc_address: localhost
+rpc_address: 192.168.99.100
 # port for Thrift to listen for clients on
 rpc_port: 0
 

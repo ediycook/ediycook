@@ -29,7 +29,7 @@ spring:
         type: simple
     data:
         cassandra:
-            contactPoints: localhost
+            contactPoints: 192.168.99.100
             port: 0
             protocolVersion: V4
             compression: NONE

@@ -5,7 +5,7 @@
     <groupId>com.e.diycook.ms.common</groupId>
     <artifactId>edkms-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>Edkms Common</name>
 
     <properties>

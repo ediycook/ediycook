@@ -46,7 +46,7 @@ public class CassandraConfiguration {
     public Cluster cluster(CassandraProperties properties) {
         Cluster.Builder builder = Cluster.builder()
                 .withClusterName(properties.getClusterName())
-                .withProtocolVersion(protocolVersion)
+                .withProtocolVersion(ProtocolVersion.V3)// replaced protocolVersion
                 .withPort(getPort(properties));
 
         if (properties.getUsername() != null) {

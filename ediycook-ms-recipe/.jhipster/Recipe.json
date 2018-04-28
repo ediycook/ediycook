@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "recipeName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "recipeDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recipeCreationDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "recipeModificationDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "recipeCertified",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "recipeCetificationAutor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recipeCertificationStartDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "recipeShared",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180428213112",
+    "entityTableName": "recipe",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "edkmsRecipe"
+}

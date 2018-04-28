@@ -1,0 +1,22 @@
+version: '2'
+services:
+    edkmsrecipe-app:
+        image: edkmsrecipe
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATA_CASSANDRA_CONTACTPOINTS=edkmsrecipe-cassandra
+            - JHIPSTER_SLEEP=30 # gives time for the Cassandra cluster to start and execute the migration scripts
+    edkmsrecipe-cassandra:
+        extends:
+            file: cassandra-cluster.yml
+            service: edkmsrecipe-cassandra
+    edkmsrecipe-cassandra-node:
+        image: cassandra:3.9
+        environment:
+            - CASSANDRA_SEEDS=edkmsrecipe-cassandra
+    edkmsrecipe-cassandra-migration:
+        extends:
+            file: cassandra-migration.yml
+            service: edkmsrecipe-cassandra-migration
+        environment:
+            - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql

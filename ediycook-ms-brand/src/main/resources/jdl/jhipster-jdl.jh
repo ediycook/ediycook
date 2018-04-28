@@ -1,0 +1,11 @@
+
+entity Brand {
+	brandName String required,
+    brandDescription String
+    //brandLogo Blob
+}
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

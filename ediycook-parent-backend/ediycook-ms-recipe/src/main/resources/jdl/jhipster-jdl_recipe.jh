@@ -1,0 +1,29 @@
+
+entity Recipe {
+	recipeName String required,
+    recipeDescription String,
+    recipeCreationDate Instant required,
+    recipeModificationDate Instant,
+    recipeCertified Boolean,
+    recipeCetificationAutor String,
+    recipeCertificationStartDate Instant,
+    recipeShared Boolean
+}
+
+entity RecipeAppreciation {
+	recipeAppreciationAutor String required,
+	recipeAppreciationVoteValue Integer min(0) max(5),
+    recipeAppreciationComment String
+}
+
+entity RecipeFlavour {
+	recipeFlavourTypeEnum String,
+	recipeFlavourIntensity Integer min(0) max (10)
+}
+
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+

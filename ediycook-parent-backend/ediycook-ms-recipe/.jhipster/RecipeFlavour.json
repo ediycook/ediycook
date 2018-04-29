@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "recipeFlavourTypeEnum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recipeFlavourIntensity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": 10
+        }
+    ],
+    "changelogDate": "20180428213114",
+    "entityTableName": "recipe_flavour",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "edkmsRecipe"
+}
